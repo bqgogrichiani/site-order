@@ -3,10 +3,11 @@
 @import url("//cdn.web-fonts.ge/fonts/bpg-nateli-mtavruli/css/bpg-nateli-mtavruli.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-nino-mkhedruli/css/bpg-nino-mkhedruli.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-rioni-vera/css/bpg-rioni-vera.min.css");
 
 
 :root {
-    --qartuli-p-tag:"BPG Nino Mkhedruli", sans-serif;
+    --qartuli-p-tag:"BPG Rioni Vera", sans-serif;
     --qartuli:"BPG Nateli Mtavruli", sans-serif;
     --qartulitwo:"BPG Arial Caps", sans-serif;
     --font-for-h-tag :'Rowdies', cursive;
@@ -17,7 +18,11 @@
     --yellow:#ffc300;
     --red:#f33316;
     --black-pink:#3730a2;
+    --blue:#0152cc;
     --grey:#808080;
+    --pink:#9f1c6b;
+    --green:#6cd565;
+    --light-pink:#c7638b;
 }
 
 body {
@@ -27,12 +32,13 @@ body {
     overflow-x: hidden;
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    transition:all .6s linear;
+    transition:all .3s ease;
 }
 
 a {
@@ -61,6 +67,10 @@ h1,h2,h3,h4 {
     font-family: var(--qartulitwo);
     font-size: .775rem;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn:hover{
+    transform: translateX(.5rem);
 }
 
 body {
@@ -152,7 +162,7 @@ header .navbar {
     display: grid;
     grid-template-columns: repeat(2, auto);
     padding: 6rem 10%;
-    background: url('../img/shape.png') no-repeat center;
+    background: url('/img/shape.png') no-repeat center;
     background-size: cover;
     position: relative;
 }
@@ -171,7 +181,7 @@ header .navbar {
 .hero__person {
     width: 400px;
     height: 100%;
-    background: url('../img/Code\ review-amico.svg') no-repeat center;
+    background: url('/img/Code\ review-amico.svg') no-repeat center;
 }
 
 .hero .message {
@@ -284,6 +294,168 @@ header .navbar {
         max-width: 90%;
         height: 100%;
         grid-area: 1;
+    }
+    
+}
+
+
+.services {
+    width: 100%;
+    padding: 2rem 10%;
+}
+
+.services .services-title {
+    text-align: center;
+}
+
+.services-title h3 , h2{
+    font-family: var(--qartulitwo);
+    color: var(--black);
+}
+
+.services-title h3{
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.services-title h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.services-title p {
+    color:var(--black);
+    font-family: var(--qartuli-p-tag);
+    width: 60%;
+    margin: .5rem auto;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.services .services-grid {
+    width: 100%;
+    margin:3rem 0;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+}
+
+.services-grid .grid-item {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 1.2rem .3rem;
+    transition: all .1s ease;
+}
+
+.grid-item p {
+    font-family: var(--qartuli-p-tag);
+    font-size: .875rem;
+    margin: 1rem auto;
+    transition: all .2s ease;
+}
+
+
+.grid-item .grid-item-icon {
+    font-size: 3rem;
+}
+
+.grid-item .grid-item-icon i {
+    transition: .1s ease;
+}
+
+
+.grid-item button {
+    border: none;
+    background: transparent;
+}
+
+
+.grid-item button i {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.grid-item:hover {
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translateY(-.75rem);
+    
+}
+
+
+.grid-item:hover button i {
+    color: #fff;
+}
+
+.grid-item:hover .grid-item-icon i {
+    color: #fff;
+}
+
+.grid-item:hover p {
+    color: #fff;
+}
+
+.grid-item:nth-child(1):hover{
+    background: var(--yellow);
+}
+
+.grid-item:nth-child(2):hover{
+    background: var(--red);
+}
+.grid-item:nth-child(3):hover{
+    background: var(--black-pink);
+}
+.grid-item:nth-child(4):hover{
+    background: var(--grey);
+}
+.grid-item:nth-child(5):hover{
+    background: var(--green);
+}
+.grid-item:nth-child(6):hover{
+    background: var(--blue);
+
+}
+.grid-item:nth-child(7):hover{
+    background: red;
+
+}
+.grid-item:nth-child(8):hover{
+    background:var(--black);
+
+}
+.grid-item:nth-child(9):hover{
+    background: var(--light-pink);
+
+}
+
+.grid-item:nth-child(10):hover{
+    background: var(--pink);
+
+}
+
+
+
+@media (max-width:1024px){
+    .services .services-title p {
+        width: 90%;
+    }
+    .services .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    .services-grid .grid-item {
+        display: flex;
+        padding: 2rem 1.2rem;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        border-radius: .2rem;
+    }
+
+    .services-grid .grid-item:hover {
+        transform: scaleX(1.1);
     }
     
 }
