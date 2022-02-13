@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url("//cdn.web-fonts.ge/fonts/bpg-nateli-mtavruli/css/bpg-nateli-mtavruli.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial-caps/css/bpg-arial-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-nino-mkhedruli/css/bpg-nino-mkhedruli.min.css");
+
+
+:root {
+    --qartuli-p-tag:"BPG Nino Mkhedruli", sans-serif;
+    --qartuli:"BPG Nateli Mtavruli", sans-serif;
+    --qartulitwo:"BPG Arial Caps", sans-serif;
+    --font-for-h-tag :'Rowdies', cursive;
+    --comfortaa: 'Comfortaa', cursive;
+    --quick : 'Quicksand', sans-serif;
+    --black:#1e1e26;
+    --white : #fafafa;
+    --yellow:#ffc300;
+    --red:#f33316;
+    --black-pink:#3730a2;
+    --grey:#808080;
+}
+
+body {
+    width: 100%;
+    height: 1500px;
+    max-width: 1440px;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition:all .6s linear;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4 {
+    font-family: var(--comfortaa);
+    font-size: 1.5rem;
+}
+
+
+.btn {
+    padding: .7rem 1.2rem;
+    background: var(--red);
+    border-radius: .2rem;
+    color: var(--white);
+    font-family: var(--qartulitwo);
+    font-size: .775rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+}
+
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+header .navbar {
+    width: 100%;
+    height: 80px;
+    padding: 1.5rem 10%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar .nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo .item__box {
+    display:grid;
+    text-align: left;
+}
+
+.mobile-bar {
+    display: none;
+}
+
+.item__box h3 {
+    font-weight: bolder;
+    color: var(--black);
+    text-shadow: 0px 2px 2px var(--black);
+}
+
+.item__box span {
+    font-family: "BPG Nateli Mtavruli", sans-serif;
+    font-size: .675rem;
+    font-weight: bold;
+    color: var(--black);
+    margin-top: .2rem;
+}
+
+.navbar .nav__logo i {
+    font-size: 2.5rem;
+    margin-right: .5rem;
+    color: var(--red);
+    transform: rotate(25deg);
+}
+
+.navbar .nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav .nav-item {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.nav-item .nav-link {
+    font-family: var(--qartulitwo);
+    font-size: .875rem;
+    color: var(--black);
+}
+
+.nav-link:hover {
+    color: var(--red);
+}
+
+
+.hero {
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    padding: 6rem 10%;
+    background: url('/img/shape.png') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--black);
+    z-index: -1;
+}
+
+.hero__person {
+    width: 400px;
+    height: 100%;
+    background: url('/img/Code\ review-amico.svg') no-repeat center;
+}
+
+.hero .message {
+    width: 100%;
+    padding: 2.5rem;
+}
+
+
+.message h1 {
+    font-family: var(--qartulitwo);
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.message p {
+    font-family: var(--qartuli-p-tag);
+    font-size: 1rem;
+    color:var(--grey);
+    line-height: 1.6;
+}
+
+.btn-start {
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+
+@media (max-width:1024px){
+
+    body {
+        overflow-x: hidden;
+    }
+    .navbar {
+        position: relative;
+        border-bottom: 1px solid rgb(212, 212, 212);
+        z-index: 1000;
+    }
+
+    .navbar .contact-btn {
+        display: none;
+    }
+
+    .navbar .nav {
+        position: absolute;
+        background: var(--white);
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        left: -100%;
+        top: 80px;
+        padding: 2.5rem 0;
+        text-align: center;
+        opacity: 0;
+    }
+
+    .nav.active {
+        left: 0;
+        opacity: 1;
+    }
+
+    .nav .nav-item {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        padding: 1rem;
+    }
+    .mobile-bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-bar i {
+        font-size:2.5rem;
+    }
+    .mobile-bar.active {
+        color: var(--red);
+    }
+
+    .hero {
+        width: 100%;
+        height: 100vh;
+        padding: 4rem 0;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column-reverse; 
+    }
+
+    .message {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .message h1 {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .message p {
+        width: 100%;
+    }
+
+    .hero__person {
+        padding: 1rem;
+        width: 100%;
+        max-width: 90%;
+        height: 100%;
+        grid-area: 1;
+    }
+    
+}
