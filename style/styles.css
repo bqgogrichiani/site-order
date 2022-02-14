@@ -170,7 +170,7 @@ header .navbar {
     grid-template-columns: repeat(2, auto);
     padding: 6rem 10%;
     padding-bottom: 10rem;
-    background: url('/img/shape.png') no-repeat center;
+    background: url('../img/shape.png') no-repeat center;
     background-size: cover;
     position: relative;
 }
@@ -270,7 +270,7 @@ header .navbar {
 .hero__person {
     width: 400px;
     height: 100%;
-    background: url('/img/Code\ review-amico.svg') no-repeat center;
+    background: url('../img/Code\ review-amico.svg') no-repeat center;
 }
 
 .hero .message {
@@ -704,7 +704,7 @@ header .navbar {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('/img/img.jpg') no-repeat center;
+    background: url('../img/img.jpg') no-repeat center;
     background-size: cover;
     transition: all .7s ease;
     z-index: -1;
